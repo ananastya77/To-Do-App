@@ -1,0 +1,28 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+.done {
+  color: #00675c;
+  font-style: italic;
+  text-decoration: line-through;
+}
+
+.task {
+  color: #742c00;
+}
+
+.root {
+  color: rgb(166,74,0);
+}
+
+.root.checked {
+  color: rgb(166,74,0);
+}
+
+.label {
+  color: rgb(29,116,113);
+}

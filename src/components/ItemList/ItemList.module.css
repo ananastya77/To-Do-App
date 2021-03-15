@@ -1,0 +1,24 @@
+.list {
+  max-height: 300px;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  overflow-y: scroll;
+}
+
+.item {
+  height: 44px;
+}
+
+@media (max-width: 600px) {
+  .list {
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .item {
+    height: 34px;
+    font-size: 14px;
+  }
+}

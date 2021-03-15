@@ -1,0 +1,159 @@
+.wrap {
+  margin-top: 10px;
+  position: relative;
+}
+
+.input,
+.input__error {
+  background: transparent;
+  padding: 10px 0 8px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.input:focus,
+.input__error:focus {
+  outline: none;
+}
+
+.input {
+  border-bottom: 1px solid #1d7471;
+  color: #005c59;
+}
+
+.input__error {
+  border-bottom: 1px solid #cf1212;
+  color: #1d7471;
+}
+
+.label,
+.label__error {
+  font-size: 17px;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+}
+
+.label {
+  color: #1d7471;
+}
+
+.label__error {
+  color: #cf1212;
+}
+
+.input:focus ~ .label,
+.input__error:focus ~ .label__error {
+  top: -10px;
+  font-size: 14px;
+  color: #1d7471;
+}
+
+.input__error:focus ~ .label__error,
+.input__error:valid ~ .label__error {
+  border: none;
+  border-bottom: #cf1212;
+  color: #cf1212;
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: 50%;
+}
+
+.bar::before,
+.bar::after {
+  content: '';
+  height: 1.5px;
+  width: 0;
+  right: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #1d7471;
+  transition: .2s ease all;
+}
+
+.bar::before {
+  left: 100%;
+}
+
+.bar::after {
+  right: 0%;
+}
+
+.input:focus ~ .bar::before,
+.input:focus ~ .bar::after,
+.input__error:focus ~ .bar::before,
+.input__error:focus ~ .bar::after, {
+  width: 100%;
+}
+
+.input__error:focus ~ .bar::before,
+.input__error:focus ~ .bar::after {
+  background: #cf1212;
+}
+
+.button {
+  display: block;
+  min-width: 150px;
+  height: 42px;
+  margin: 10px auto;
+  padding: auto;
+  background-color: #1d7471;
+  border-radius: 6px;
+  border: 1px solid #1d7471;
+  transition: .5s ease-in-out;
+}
+
+.button:hover {
+  border-color: #2da09c;
+  background-color: #2da09c;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+
+.button:active {
+  border: none;
+  background-color: #1d7471;
+  transition: .1s ease-in-out;
+}
+
+.button:focus {
+  border: none;
+  outline: none;
+  transition: .5s ease-in-out;
+}
+
+.button__text {
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+}
+
+@media (max-width: 500px) {
+  .input,
+  .input__error {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .label,
+  .label__error {
+    font-size: 13px;
+  }
+
+  .button {
+    min-width: 120px;
+    height: 32px;
+  }
+
+  .button__text {
+    font-size: 14px;
+  }
+}

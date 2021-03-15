@@ -1,0 +1,32 @@
+.wrap {
+  padding: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  color: #a64b00;
+}
+
+.title {
+  margin: 20px auto 5px;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+  font-size: 40px;
+  font-weight: 300;
+  color: #a63f00;
+  text-transform: uppercase;
+}
+
+.letter {
+  color: #1d7471;
+}
+
+@media (max-width: 610px) {
+  .title {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 25px;
+  }
+}
